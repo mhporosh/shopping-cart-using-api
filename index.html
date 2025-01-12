@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- FontAwesome (CDN) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Shopping Cart</h1>
+            <button id="view-cart-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-basket"></i>
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div id="product-list" class="product-list"></div>
+    </main>
+
+    <aside id="cart-panel" class="cart-panel">
+        <div class="cart-header">
+            <h2>Cart</h2>
+            <button id="close-cart-btn" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </aside>
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+</body>
+</html>
