@@ -21,7 +21,9 @@
     </header>
 
     <main>
-        <div id="product-list" class="product-list"></div>
+        <div id="product-list" class="product-list">
+            <!-- Products will be dynamically loaded here -->
+        </div>
     </main>
 
     <aside id="cart-panel" class="cart-panel">
@@ -31,12 +33,34 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        <div id="cart-items" class="cart-items"></div>
+
+        <!-- Cart Items -->
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <!-- Cart Footer -->
         <div class="cart-footer">
+            <!-- Promo Code Section -->
+            <div class="promo-code">
+                <input
+                    type="text"
+                    id="promoCodeInput"
+                    placeholder="Enter Promo Code"
+                />
+                <button onclick="applyPromoCode()">Apply</button>
+            </div>
+            <p id="promoMessage" class="promo-message"></p>
+
+            <!-- Cart Summary Section -->
+            <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+            <p>Discount: -$<span id="cart-discount">0.00</span></p>
             <p>Total: $<span id="cart-total">0.00</span></p>
+
+            <!-- Action Buttons -->
             <button onclick="checkout()">Checkout</button>
             <button onclick="clearCart()">Clear Cart</button>
-        </div>
+        </div>        
     </aside>
 
     <!-- Script -->
